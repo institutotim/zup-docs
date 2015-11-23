@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Como adotar a plataforma - ZUP – Zeladoria Urbana Participativa</title>
+  
+
+  <link rel="shortcut icon" href="../images/favicon.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../css/main.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Como adotar a plataforma";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+  <script src="../javascript/main.js"></script>
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> ZUP – Zeladoria Urbana Participativa</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Sobre a plataforma</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="..">Introdução</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Como adotar a plataforma</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#componentes-essenciais">Componentes essenciais</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#uso-em-campo">Uso em campo</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#usuarios-externos-e-aplicativos-moveis">Usuários externos e aplicativos móveis</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Obtenha os softwares</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../installation_docker/">Instalação</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../updating_docker/">Atualização</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Configuração</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../api_configuration/">Configuração da API</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../web_configuration/">Configuração dos aplicativos Web</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">ZUP – Zeladoria Urbana Participativa</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Sobre a plataforma &raquo;</li>
+        
+      
+    
+    <li>Como adotar a plataforma</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>O ZUP oferece funcionalidades úteis para diversos tipos de instituições – públicas e privadas – e, devido a flexibilidade da plataforma, diversos setores dentro destas podem se beneficiar das ferramentas de organização e da visibilidade proporcionada pelo uso delas.
+Listamos aqui as etapas mínimas necessárias para se colocar em produção o sistema, seja com todas as funcionalidades habilitadas, ou apenas com parte delas.</p>
+<h2 id="componentes-essenciais">Componentes essenciais</h2>
+<p>Independente de quais aplicativos forem selecionados para uso pela organização, dois componentes são necessários para operar o sistema: a API e o Painel Administrativo. A API, também conhecida como backend, é responsável pelo armazenamento e roteamento de informações e implementa a lógica de negócio dos diferentes módulos do sistema através de uma interface exposta via HTTP. Este componente deve rodar em um servidor acessível ao Painel Administrativo e a todos os outros aplicativos escolhidos, seja isso na internet pública ou na rede privada.
+O Painel Administrativo é a principal ferramenta para manipulação e uso do sistema e possui acesso a todas funcionalidades disponíveis na plataforma. Se sua organização necessita usar a aplicação no backoffice através de notebooks ou desktops, a instalação e configuração destes dois componentes é tudo que você precisa.</p>
+<ul>
+<li><a href="../installation_docker/">Realize a instalação e configuração da plataforma com o guia neste site</a>.</li>
+<li><a href="https://zeladoriaurbana.zendesk.com/hc/pt-br/articles/203948149-Criando-um-grupo-e-atribuindo-permiss%C3%B5es">Entenda e configure grupos de usuários e permissões com a documentação da base de conhecimento</a>.</li>
+<li>Crie <a href="https://zeladoriaurbana.zendesk.com/hc/pt-br/articles/203925815-Criando-a-categoria-de-relato">categorias de relato</a> e <a href="https://zeladoriaurbana.zendesk.com/hc/pt-br/articles/203925215-O-que-%C3%A9-uma-categoria-de-invent%C3%A1rio-">categorias de inventário</a>.</li>
+<li><a href="https://zeladoriaurbana.zendesk.com/hc/pt-br">Conheça as outras funcionalidades que o sistema oferece e que pode ser útil na sua organização</a>.</li>
+</ul>
+<h2 id="uso-em-campo">Uso em campo</h2>
+<p>O ZUP Técnico permite agentes em campo interagir com o sistema de forma quase tão abrangente quanto o Painel Administrativo. Funcionalidades que tratem de criação e configuração de categorias de inventários, relatos, visualização de relatórios e outras ferramentas administrativas não estão disponíveis no aplicativo. Entretanto a criação, edição e consumo de itens já configurados no sistema pode ser utilizada, até sem conexão com a internet (no caso de relatos e itens de inventário) – o que torna o aplicativo ideal para uso em fiscalização,  vistoria e outras formas de trabalho em campo.</p>
+<ul>
+<li><a href="https://github.com/LaFabbrica/zup-android-tecnico">Baixe, configure e distribua a aplicação técnica seguindo as instruções no repositório do componente.</a></li>
+</ul>
+<h2 id="usuarios-externos-e-aplicativos-moveis">Usuários externos e aplicativos móveis</h2>
+<p>Finalmente, o sistema também conta com aplicativos móveis destinados a permitir o consumo de informações sobre itens de inventário, a gestão de relatos pessoais e ao consumo de informações públicas sobre relatos de terceiros para usuários que podem ou não pertencer a organização.  Estes aplicativos foram feitos para smartphones e tem como público alvo principal atores que farão uso casual do sistema.</p>
+<ul>
+<li><a href="https://github.com/LaFabbrica/zup-ios-cidadao">Baixe, configure e distribua a aplicação iOS seguindo as instruções no repositório do componente.</a></li>
+<li><a href="https://github.com/LaFabbrica/zup-android-cidadao">Baixe, configure e distribua a aplicação Android seguindo as instruções no repositório do componente.</a></li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../installation_docker/" class="btn btn-neutral float-right" title="Instalação"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Introdução"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright TIM Celular 2015 - Todos direitos reservados. Licenciado através da <a href="https://www.gnu.org/licenses/gpl-2.0.html" target="_blank">GPL v2</a>.</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../installation_docker/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
