@@ -16,4 +16,19 @@ All documents here were generated with [mkdocs](http://www.mkdocs.org).
 ```
   # pip install mkdocs
 ```
+3 - Clone the repo using git (sudo or root permission is not necessary): 
 
+```
+  $ git clone https://github.com/institutotim/zup-docs.git
+```
+4 - Done! All content files will be in docs directory. 
+
+## How to get a local installation?
+
+1 - After clone the repo, get the diretory and run mkdocs:
+
+```
+$ cd zup-docs
+$ mkdocs serve
+```
+2 - In localhost plus default door (http://127.0.0.1:8000) you can reach the docs site. If you want to make some changes, mkdocs will be able to show automaticaly. 
