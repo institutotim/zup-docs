@@ -1,8 +1,8 @@
-# ZUP > Documents 
+# ZUP Project Documentation
 
-This is the official repository of ZUP Project Documentation. Here, you can find docs about instalation and maintenance mode of "Web Cidadão", "Painel", "Android Cidadão e Técnico" and "IOS Cidadão".
+This is the official repository of ZUP Project Documentation. Here, you can find docs about installation and maintenance mode of "Web Cidadão", ["Painel"](https://github.com/institutotim/zup-painel), ["Android Cidadão e Técnico"](https://github.com/institutotim/zup-android-cidadao) and ["IOS Cidadão"](https://github.com/institutotim/zup-ios-cidadao).
 
-All documents here was generated with [mkdocs](http://www.mkdocs.org). 
+All documents here were generated with [mkdocs](http://www.mkdocs.org).
 
 ## How to get this documentation? 
 
