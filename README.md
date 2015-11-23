@@ -4,7 +4,7 @@ This is the official repository of Documantation ZUP Project. Here, you can find
 
 All documents here was generated with [mkdocs](http://www.mkdocs.org). 
 
-## How to get documentation? 
+## How to get this documentation? 
 
 1 - In a distro gnu/linux using apt package manager, install the package management system of python language (pip). Sudo user or root permissions can be required:
 
