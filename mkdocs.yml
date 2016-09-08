@@ -1,0 +1,19 @@
+site_name: ZUP – Zeladoria Urbana Participativa
+site_description: Torne sua cidade mais eficiente através da comunicação direta entre orgãos públicos e munícipes.
+pages:
+  - Sobre a plataforma:
+    - Introdução: 'index.md'
+    - Como adotar a plataforma: 'implement.md'
+  - Obtenha os softwares:
+    - 'Instalação': installation_docker.md
+    - 'Atualização': updating_docker.md
+  - Configuração:
+    - 'Configuração da API': api_configuration.md
+    - 'Configuração dos aplicativos Web': web_configuration.md
+theme: readthedocs
+copyright: Copyright TIM Celular 2015 - Todos direitos reservados. Licenciado através da <a href="https://www.gnu.org/licenses/gpl-2.0.html" target="_blank">GPL v2</a>.
+site_favicon: images/favicon.ico
+extra_css:
+  - css/main.css
+extra_javascript:
+  - javascript/main.js
