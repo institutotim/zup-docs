@@ -1,0 +1,14 @@
+.icon-home::before {
+    content: '';
+}
+
+.icon-home {
+    color: transparent !important;
+    width: 86px;
+    height: 37px;
+    background: url('/images/logo.png') no-repeat;
+}
+
+.icon-home:hover {
+    background: url('/images/logo.png') no-repeat !important;
+}
