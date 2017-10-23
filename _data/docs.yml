@@ -1,11 +1,13 @@
 - title: Getting Started
   docs:
   - home
-  - themes
-  - customization
+  - implement
 
-- title: Examples
+- title: Obter os softwares
   docs:
-  - cheatsheet
-  - font-awesome
-  - bootstrap
+  - installation
+  - updating
+
+- title: Configuração
+  docs:
+  - api_configuration
