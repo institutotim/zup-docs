@@ -40,6 +40,23 @@ em ambos os casos: [https://docs.docker.com/articles/security/](https://docs.doc
 sudo gpasswd -a ${USER} docker
 ```
 
+### Verifique se o docker está rodando
+
+```
+$ docker ps
+```
+Se você der o comando acima e estiver rodando, verá algo como isso: 
+![selecao_002](https://user-images.githubusercontent.com/641411/34955061-feb1ebe4-fa09-11e7-9701-6c471a1b992b.png)
+
+
+Caso não esteja rodando, tente subir o serviço:
+
+```
+# service docker start
+```
+
+
+
 ## Pré-requisito: Supervisord
 O supervisord é distribuido através do PyPI e pode ser instalado através do `easy_install`.
 
