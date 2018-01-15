@@ -7,12 +7,13 @@ A distribuição das aplicações em forma já compilada para uso é feita atrav
 [Docker](https://docs.docker.com/) é uma tecnologia para distribuição e execução de aplicações virtualizadas a nível de
 sistema operacional. A maneira mais simples e eficaz de se manter uma instalação do ZUP é utilizando as imagens dos
 componentes que disponibilizamos no Docker Hub. Este documento descreve as etapas para instalar e executar os
-componentes básicos para rodar a API e as aplicações web do ZUP no sistema operacional Ubuntu 14.04 64 bits. Entretanto
-qualquer sistema operacional que suporte Docker deve funcionar com os passos abaixo, salvo que você precisará utilizar o
-gerenciador de pacotes do seu sistema operacional ao invés do `apt` e talvez tenha que desabilitar o SELinux, caso
-venha habilitado por padrão na sua distribuição. Além disso, utilizamos o [Supervisord](supervisord.org) para gerenciar
-a execução dos containers da aplicação, incluindo a inicialização dos containers junto com o sistema e a reinicialização
-dos mesmos em caso de erros.
+componentes básicos para rodar a API e as aplicações web do ZUP nos seguintes sistemas:
+
+* Gnu/Linux Debian 9;
+* Gnu/Linux Ubuntu 16.04;
+* Gnu/Linux Centos OS 7;
+
+Entretanto qualquer sistema operacional que suporte Docker deve funcionar com os passos abaixo, salvo que você precisará utilizar o gerenciador de pacotes do seu sistema operacional ao invés do `apt` e talvez tenha que desabilitar o SELinux, caso venha habilitado por padrão na sua distribuição. Além disso, utilizamos o [Supervisord](supervisord.org) para gerenciar a execução dos containers da aplicação, incluindo a inicialização dos containers junto com o sistema e a reinicialização dos mesmos em caso de erros.
 
 As necessidades de recursos de hardware depende da volumetria esperada pelo projeto, entretanto no mínimo recomendamos
 6GB de RAM e dois núcleos de processamento dedicados.
@@ -55,7 +56,10 @@ Caso não esteja rodando, tente subir o serviço:
 # service docker start
 ```
 
-
+> Se estiver usando Centos OS, use o seguinte comando para manter loading do docker após reiniciar os serviços
+```
+# systemctl enable docker.service
+```
 
 ## Pré-requisito: Supervisord
 O supervisord é distribuido através do PyPI e pode ser instalado através do `easy_install`.
