@@ -93,8 +93,10 @@ Veja a seção [Configuração da API](../api_configuration/#opcoes-disponiveis)
 A versão da plataforma é controlada pelo arquivo `/opt/zup/config/version` e deve possuir apenas uma linha de código:
 
 ```
-v1.1.11
+1.3.4
 ```
+
+> Verifique a última versão disponível em: https://hub.docker.com/r/institutotim/zup-api/tags/ ou em https://github.com/institutotim/zup-api/releases
 
 As seguintes opções são obrigatórias. Para fins deste documento o arquivo de configuração da API estará localizado
 em `/opt/zup/config/api.env`:
@@ -114,22 +116,55 @@ em `/opt/zup/config/api.env`:
     SIDEKIQ_USER=admin
     SIDEKIQ_PASSWORD=123456
 
-Também há as seguintes opções opcionais do arquivo `api.env`
-
+    #informações opcionais
     RAILS_TIMEZONE=America/Sao_Paulo
     TZ=America/Sao_Paulo
     SENDER_EMAIL=zup@meuservidordeemail.com
     SENDER_NAME=zup
     SERVER_WORKERS=2
     LIMIT_CITY_BOUNDARIES=true
+    
+Exemplo para ambiente local:
+
+```
+WEB_URL=localhost
+API_URL=localhost:8282
+ASSET_HOST_URL=localhost:8282
+SMTP_ADDRESS=smtp.localhost
+SMTP_PORT=587
+SMTP_USER=seu-email@seu-dominio.com
+SMTP_PASS=102030
+SMTP_TTLS=true
+SMTP_AUTH=plain
+MAIL_HEADER_IMAGE=/usr/src/app/public/shared_images/header.jpg
+REDIS_URL=redis://redis:6379
+
+# your database information here. change if necessary
+# ex.: DATABASE_URL=postgis://YOUR-DB-USER:YOUR-DB-PASSWORD@postgres:5432/zup_db
+DATABASE_URL=postgis://db_user:db_pass@postgres:5432/zup_db
+
+SIDEKIQ_USER=admin
+SIDEKIQ_PASSWORD=123456
+
+# optional settings
+RAILS_TIMEZONE=America/Sao_Paulo
+TZ=America/Sao_Paulo
+SENDER_EMAIL=zup@meuservidordeemail.com
+SENDER_NAME=zup
+SERVER_WORKERS=2
+LIMIT_CITY_BOUNDARIES=true
+
+```
 
 Além disso é necessário informar as configurações para inicialização do banco de dados. `/opt/zup/config/postgres.env`:
 
-    POSTGRES_USER=db_user
-    POSTGRES_PASSWORD=db_pass
-    POSTGRES_DB=zup_db
+```
+POSTGRES_USER=db_user
+POSTGRES_PASSWORD=db_pass
+POSTGRES_DB=zup_db
+```
 
-Lembre-se de alterar o `api.env` quando alterar o `postgres.env`.
+> Lembre-se de alterar o `api.env` quando alterar o `postgres.env` pois no env de sua api há informações sobre o acesso à base.
 
 Finalmente, é preciso configurar informações sobre como conectar na API e qual posicionamento deve ser usado no mapa
 para as aplicações web. `/opt/zup/config/web.env`:
@@ -146,7 +181,7 @@ para as aplicações web. `/opt/zup/config/web.env`:
     DEFAULT_COUNTRY=Brasil
 
 <!-- Com esta configuração inicial, apenas o Painel Administrativo estará disponível. Para conhecer todas as opções de
-configuração, visite a seção [Configuração dos aplicativos Web](../web_configuration.md). -->
++configuração, visite a seção [Configuração dos aplicativos Web](../web_configuration.md). -->
 
 ## Baixe as imagens da aplicação
 
