@@ -86,7 +86,7 @@ sudo mkdir -p \
 ```
 
 ## Crie os arquivos de configuração
-Durante a inicialização a API lê uma série de variáveis de configuração do ambiente. Para passar essas configurações via
+Durante a inicialização, a API lê uma série de variáveis de configuração do ambiente. Para passar essas configurações via
 Docker basta criar um arquivo contendo uma série de chave-valores.
 Veja a seção [Configuração da API](api_configuration/#opcoes-disponiveis) para conhecer as configurações disponíveis.
 
