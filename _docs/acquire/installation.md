@@ -122,8 +122,14 @@ em `/opt/zup/config/api.env`:
     SENDER_EMAIL=zup@meuservidordeemail.com
     SENDER_NAME=zup
     SERVER_WORKERS=2
-    LIMIT_CITY_BOUNDARIES=true
-    
+
+    # These two settings need to be set together, uncomment them if you need.
+
+    # LIMIT_CITY_BOUNDARIES=true
+    # GEOCODM=
+
+>Você consegue o GEOCODM da sua cidade nesse link: [site IBGE](https://www.ibge.gov.br/geociencias-novoportal/organizacao-do-territorio/estrutura-territorial/15761-areas-dos-municipios.html?&t=destaques )
+
 Exemplo para ambiente local:
 
 ```
@@ -152,7 +158,9 @@ TZ=America/Sao_Paulo
 SENDER_EMAIL=zup@meuservidordeemail.com
 SENDER_NAME=zup
 SERVER_WORKERS=2
+
 LIMIT_CITY_BOUNDARIES=true
+GEOCODM=4104808
 
 ```
 
