@@ -226,12 +226,15 @@ respawn
 exec /usr/local/bin/supervisord --nodaemon --configuration /etc/supervisord.conf
 ```
 
-## Inicialize o banco de dados
-Para criar a estrutura da aplicação no banco de dados, basta executar os comandos a baixo:
+## Inicie o supervisor
 
 ```
-supervisorctl start redis postgres
+supervisord
 ```
+
+## Inicialize o banco de dados
+Para criar a estrutura da aplicação no banco de dados, basta executar o comando abaixo:
+
 
 ```
 docker run -it \
@@ -243,16 +246,10 @@ docker run -it \
 As credenciais de uma conta de administrador será exibida na saída do comando.
 
 
-## Inicie o supervisor
+## Reinicie a aplicação
 
 ```
-supervisord
-```
-
-## Inicie a aplicação
-
-```
-supervisorctl start all
+supervisorctl restart all
 ```
 
 Por padrão a aplicação web estará disponível na porta 80 e a API na porta 8282.
@@ -263,4 +260,13 @@ com seguinte comando:
 
 ```
 cat NOME_DO_DUMP  | docker exec -i postgres psql -U db_user zup_db
+```
+
+### FAQ
+
+Pode ser que você precise reinicializar o serviço do supervisor, nesse caso use o seguinte comando:
+
+```
+# Como root
+kill -s SIGTERM  $(ps -eo pid,command | grep supervisord | grep -v grep | awk '{print $1}')
 ```
