@@ -11,7 +11,7 @@ componentes básicos para rodar a API e as aplicações web do ZUP nos seguintes
 
 * Gnu/Linux Debian 9;
 * Gnu/Linux Ubuntu 16.04;
-* Gnu/Linux Centos OS 7;
+* Gnu/Linux CentOS 7;
 
 Entretanto qualquer sistema operacional que suporte Docker deve funcionar com os passos abaixo, salvo que você precisará utilizar o gerenciador de pacotes do seu sistema operacional ao invés do `apt` e talvez tenha que desabilitar o SELinux, caso venha habilitado por padrão na sua distribuição. Além disso, utilizamos o [Supervisord](supervisord.org) para gerenciar a execução dos containers da aplicação, incluindo a inicialização dos containers junto com o sistema e a reinicialização dos mesmos em caso de erros.
 
@@ -46,7 +46,7 @@ sudo gpasswd -a ${USER} docker
 ```
 $ docker ps
 ```
-Se você der o comando acima e estiver rodando, verá algo como isso: 
+Se você der o comando acima e estiver rodando, verá algo como isso:
 ![selecao_002](https://user-images.githubusercontent.com/641411/34955061-feb1ebe4-fa09-11e7-9701-6c471a1b992b.png)
 
 
@@ -56,7 +56,7 @@ Caso não esteja rodando, tente subir o serviço:
 # service docker start
 ```
 
-> Se estiver usando Centos OS, use o seguinte comando para manter loading do docker após reiniciar os serviços
+> Se estiver usando CentOS, use o seguinte comando para manter loading do docker após reiniciar os serviços
 ```
 # systemctl enable docker.service
 ```
@@ -289,6 +289,28 @@ respawn
 
 exec /usr/local/bin/supervisord --nodaemon --configuration /etc/supervisord.conf
 ```
+
+Se estiver usando CentOS o Supervisord deverá ser configurado desta maneira:
+
+Crie o seguinte arquivo: `/usr/lib/systemd/system/supervisord.service` com o conteúdo:
+
+```ini
+[Unit]
+Description=Supervisor daemon
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/supervisord
+ExecStop=/usr/bin/supervisorctl $OPTIONS shutdown
+ExecReload=/usr/bin/supervisorctl $OPTIONS reload
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
+```
+
+E habilite para rodar no boot: `systemctl enable supervisord.service`
 
 ## Inicie o supervisor
 
