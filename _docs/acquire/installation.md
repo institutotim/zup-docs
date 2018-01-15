@@ -88,7 +88,7 @@ sudo mkdir -p \
 ## Crie os arquivos de configuração
 Durante a inicialização, a API lê uma série de variáveis de configuração do ambiente. Para passar essas configurações via
 Docker basta criar um arquivo contendo uma série de chave-valores.
-Veja a seção [Configuração da API](api_configuration/#opcoes-disponiveis) para conhecer as configurações disponíveis.
+Veja a seção [Configuração da API](../api_configuration/#opcoes-disponiveis) para conhecer as configurações disponíveis.
 
 A versão da plataforma é controlada pelo arquivo `/opt/zup/config/version` e deve possuir apenas uma linha de código:
 
@@ -145,8 +145,8 @@ para as aplicações web. `/opt/zup/config/web.env`:
     DEFAULT_STATE=SP
     DEFAULT_COUNTRY=Brasil
 
-Com esta configuração inicial, apenas o Painel Administrativo estará disponível. Para conhecer todas as opções de
-configuração, visite a seção [Configuração dos aplicativos Web](web_configuration.md).
+<!-- Com esta configuração inicial, apenas o Painel Administrativo estará disponível. Para conhecer todas as opções de
+configuração, visite a seção [Configuração dos aplicativos Web](../web_configuration.md). -->
 
 ## Baixe as imagens da aplicação
 
