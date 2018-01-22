@@ -8,12 +8,13 @@ Template baseado no tema:
 Você precisa de Ruby instalado antes de prosseguir.
 
 ```bash
+# clone the project and get in the 
+git clone https://github.com/institutotim/zup-docs
+cd zup-docs
+
 # install bundler
 gem install bundler
 
-# clone the project
-git clone https://github.com/institutotim/zup-docs
-cd zup-docs
 
 # run jekyll with dependencies
 bundle exec jekyll serve
