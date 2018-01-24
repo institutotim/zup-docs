@@ -23,3 +23,7 @@ bundle exec jekyll serve
 ## Licença
 
 Licenciado por [MIT license](LICENSE).
+
+## Origin by @aksakalli Jekyll Doc Theme
+
+https://github.com/aksakalli/jekyll-doc-theme
