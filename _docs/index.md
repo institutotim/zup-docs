@@ -37,6 +37,6 @@ Além disso, existem três aplicações web com os seguintes propósito:
 Para conhecer mais sobre os objetivos do produto ou outras iniciativas do Instituto TIM
 visite a página do projeto no site do [Instituto TIM](http://institutotim.org.br/solucoes/zup/).
 
-Se você procura informações sobre o uso do sistema, entre na [base de conhecimento](http://zeladoriaurbana.zendesk.com/hc/pt-br).
+Se você procura informações sobre o uso do sistema, entre na base de conhecimento.
 O restante do site serve como um manual de instalação, configuração e manutenção da plataforma e é destinado a equipes
 de TI e desenvolvedores.
