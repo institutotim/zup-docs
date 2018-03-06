@@ -104,6 +104,7 @@ em `/opt/zup/config/api.env`:
     WEB_URL=https://www.meuzup.com.br
     API_URL=http://api.meuzup.com.br:8282
     ASSET_HOST_URL=https://api.meuzup.com.br
+    RACK_ENV=production
     SMTP_ADDRESS=smtp.meuservidordeemail.com
     SMTP_PORT=587
     SMTP_USER=zup@meuservidordeemail.com
@@ -115,7 +116,7 @@ em `/opt/zup/config/api.env`:
     DATABASE_URL=postgis://db_user:db_pass@postgres:5432/zup_db
     SIDEKIQ_USER=admin
     SIDEKIQ_PASSWORD=123456
-
+    
     #informações opcionais
     RAILS_TIMEZONE=America/Sao_Paulo
     TZ=America/Sao_Paulo
@@ -133,10 +134,12 @@ em `/opt/zup/config/api.env`:
 Exemplo para ambiente local:
 
 ```
-WEB_URL=localhost
-API_URL=localhost:8282
-ASSET_HOST_URL=localhost:8282
+API_DOMAIN=http://localhost:8282
+API_URL=http://localhost:8282
+ASSET_HOST_URL=http://localhost:8282
+WEB_URL=http://localhost/painel
 SMTP_ADDRESS=smtp.localhost
+RACK_ENV=development
 SMTP_PORT=587
 SMTP_USER=seu-email@seu-dominio.com
 SMTP_PASS=102030
@@ -181,9 +184,10 @@ para as aplicações web. `/opt/zup/config/web.env`:
     MAP_LAT=-23.689701
     MAP_LNG=-46.564874
     MAP_ZOOM=11
-    DISABLE_LANDING_PAGE=true
-    DISABLE_WEB_APP=true
+    DISABLE_LANDING_PAGE=false
+    DISABLE_WEB_APP=false
     PAGE_TITLE=Sistema ZUP
+    FLOWS_ENABLED=false
     DEFAULT_CITY=São Paulo
     DEFAULT_STATE=SP
     DEFAULT_COUNTRY=Brasil
