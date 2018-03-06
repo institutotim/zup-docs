@@ -1,0 +1,60 @@
+- title: Início
+  knowledge:
+  - home
+  - what_is_zup
+  - zup_modules
+
+- title: Inventário
+  knowledge:
+  - inventory_category
+  - new_inventory_category
+  - fields_available_for_forms
+  - title_color_icon_inventory
+  - permission_to_inventory_access
+  - status_formula_inventory
+  - configs_invetory_categories
+  - consult_inventory_items
+  - using_inventory_filters
+  - history_inventory_items
+
+- title: Relato
+  knowledge:
+  - creating_report_category
+  - report_field_description
+  - report_perimeter
+  - report_notification
+  - reports
+
+- title: Grupos, permissões e usuários
+  knowledge:
+  - creating_users_permissions
+  - reports_permissions
+  - inventory_permissions
+  - record_permissions
+  - configuration_permissions
+
+- title: Relatórios
+  knowledge:
+  - record
+
+- title: Fluxos e Casos
+  knowledge:
+  - what_is_an_flow
+  - what_is_an_stage
+  - publishing_flow
+
+- title: Perguntas mais frequentes (FAQ)
+  knowledge:
+  - remove_admin_access
+  - category_not_showing
+  - disable_user_with_admin_access
+  - cant_delete_category
+  - citizen_reports_feedback
+  - what_the_colors_mean
+  - attendant_can_register_categories
+  - color_on_map_report
+  # - inventory_item_icon
+
+# - title: Configuração
+#   knowledge:
+#   - api_configuration
