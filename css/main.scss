@@ -90,3 +90,11 @@ body {
 .navbar-form .has-feedback .form-control-feedback{
   top:10px
 }
+
+@media (max-width: 767px) {
+  .affix {
+    position: static;
+    width: auto;
+    top: 0;
+  }
+}
