@@ -57,6 +57,7 @@ Caso não esteja rodando, tente subir o serviço:
 ```
 
 > Se estiver usando CentOS, use o seguinte comando para manter loading do docker após reiniciar os serviços
+
 ```
 # systemctl enable docker.service
 ```
@@ -82,6 +83,7 @@ sudo mkdir -p \
     /opt/zup/uploads \
     /opt/zup/shared_images \
     /opt/zup/logs/api \
+    /opt/zup/shapefiles \
     /opt/zup/logs/nginx
 ```
 
@@ -96,11 +98,12 @@ A versão da plataforma é controlada pelo arquivo `/opt/zup/config/version` e d
 1.3.4
 ```
 
-> Verifique a última versão disponível em: https://hub.docker.com/r/institutotim/zup-api/tags/ ou em https://github.com/institutotim/zup-api/releases
+> Verifique a última versão disponível em: <https://hub.docker.com/r/institutotim/zup-api/tags/>
 
 As seguintes opções são obrigatórias. Para fins deste documento o arquivo de configuração da API estará localizado
 em `/opt/zup/config/api.env`:
 
+```
     WEB_URL=https://www.meuzup.com.br
     API_URL=http://api.meuzup.com.br:8282
     ASSET_HOST_URL=https://api.meuzup.com.br
@@ -116,7 +119,7 @@ em `/opt/zup/config/api.env`:
     DATABASE_URL=postgis://db_user:db_pass@postgres:5432/zup_db
     SIDEKIQ_USER=admin
     SIDEKIQ_PASSWORD=123456
-    
+
     #informações opcionais
     RAILS_TIMEZONE=America/Sao_Paulo
     TZ=America/Sao_Paulo
@@ -128,8 +131,10 @@ em `/opt/zup/config/api.env`:
 
     # LIMIT_CITY_BOUNDARIES=true
     # GEOCODM=
-
->Você consegue o GEOCODM da sua cidade nesse link: [site IBGE](https://www.ibge.gov.br/geociencias-novoportal/organizacao-do-territorio/estrutura-territorial/15761-areas-dos-municipios.html?&t=destaques )
+```
+> Você consegue o GEOCODM da sua cidade nesse link: [site IBGE](https://www.ibge.gov.br/geociencias-novoportal/organizacao-do-territorio/estrutura-territorial/15761-areas-dos-municipios.html?&t=destaques )
+>
+> E seu shapefile que deverá ser extraído na pasta /opt/zup/shapefiles nesse link: <ftp://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_municipais/>
 
 Exemplo para ambiente local:
 
@@ -273,6 +278,7 @@ command=/bin/bash -c "docker rm -f zup-api || true && docker run --rm --link pos
                         -v /opt/zup/logs/api:/usr/src/app/log \
                         -v /opt/zup/config:/usr/src/app/config/permissions \
                         -v /opt/zup/shared_images:/usr/src/app/public/shared_images \
+                        -v /opt/zup/shapefiles:/usr/src/app/db/shapes \
                         -p 8282:80 --name zup-api institutotim/zup-api:$(cat /opt/zup/config/version)"
 priority=3
 redirect_stderr=true
