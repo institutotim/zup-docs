@@ -184,7 +184,7 @@ POSTGRES_DB=zup_db
 
 Finalmente, é preciso configurar informações sobre como conectar na API e qual posicionamento deve ser usado no mapa
 para as aplicações web. `/opt/zup/config/web.env`:
-
+```
     API_URL=http://api.meuzup.com.br:8282
     MAP_LAT=-23.689701
     MAP_LNG=-46.564874
@@ -192,10 +192,12 @@ para as aplicações web. `/opt/zup/config/web.env`:
     DISABLE_LANDING_PAGE=false
     DISABLE_WEB_APP=false
     PAGE_TITLE=Sistema ZUP
-    FLOWS_ENABLED=false
     DEFAULT_CITY=São Paulo
     DEFAULT_STATE=SP
-    DEFAULT_COUNTRY=Brasil
+    DEFAULT_COUNTRY=Brasil   
+    GOOGLE_API_KEY=PARAMETRO_OBRIGATORIO_SUA_CHAVE_AQUI
+    
+```
 
 <!-- Com esta configuração inicial, apenas o Painel Administrativo estará disponível. Para conhecer todas as opções de
 +configuração, visite a seção [Configuração dos aplicativos Web](../web_configuration.md). -->
